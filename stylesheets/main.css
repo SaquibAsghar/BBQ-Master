@@ -1,0 +1,145 @@
+:root {
+
+    --primary-color: #ff7300;
+    --h1-color: #dd8383;
+    --wh-color: #eee7e7;
+    --overlay-bg-color: #4e4c4c9c;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+}
+
+.container {
+	height: 100vh;
+	/* border: 1px solid red; */
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 1.5rem;
+}
+.left-side {
+	position: relative;
+}
+
+.left-content {
+	height: 100%;
+	position: relative;
+}
+
+.container .left-side .left-content .bg-image::before {
+	content: "";
+	background: url("../images/bbq-ribs.jpg") no-repeat center center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: -2;
+}
+
+.overlay::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay-bg-color);
+	z-index: -1;
+}
+
+.card {
+	padding: 2rem;
+}
+
+.content {
+	margin-top: 35%;
+	margin-left: 20%;
+	max-width: 400px;
+	text-align: center;
+	color: var(--h1-color);
+}
+
+.content p {
+	margin-top: 1.5rem;
+	color: var(--wh-color);
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.right-side{
+    align-self: center;
+}
+
+.right-content h1, .right-content h3{
+    text-align: center;
+}
+
+.form-container{
+    width: 60%;
+    margin: 0 auto;
+}
+.right-content >h3{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.right-content >:nth-child(3){
+    margin: 1.2rem;
+}
+
+.right-content >:nth-child(3) > p{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-input input{
+    margin: 0.7rem 0rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #b45ce0;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-input input:hover,
+.form-input input:active{
+    border: 1px solid var(--primary-color);
+}
+
+button{
+    width: 100%;
+    border: none;
+    margin-top: .7rem;
+    padding: .7rem 0.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 2px 3px 1px 1px var(--overlay-bg-color);
+}
+
+button:hover{
+cursor: pointer;
+opacity: .9;
+}
+
+button:active{
+    transform: scale(.95);
+    box-shadow: none;
+}
+
+.form-container p{
+    margin-top: 1.2rem ;
+    width: 300px;
+    text-align: center;
+}
